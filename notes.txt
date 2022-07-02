@@ -1,0 +1,24 @@
+npm install @capacitor/core @capacitor/clinpx cap init --web-dir=out   
+
+
+Of what I understand, Nextjs allows you to create a website frontend along with the api backend - the way I look at it, it combines the work of react and expressjs, in a more(?) streamlined fashion. The html+js that is created by next is sent to the browser, as a react website, along with instructions for fetching backend data from the backend (which next handles). You can imagine next as a server that sends webpages (react) and handles the backend.
+
+An app is not sent over live - it needs to be compiled as an APK and made available through app stores so that it can be downloaded and installed on phones. This is not the use case for Nextjs. However, an app you make using react native can be configured to hit the same backend api end points that you create for the website, but next cannot generate the app.
+
+Another way of looking at it is, typically a web app will have 3-4 repositories of code - backend, website, android, iOS. Nextjs combines code for backend and website. React native will help you combine code for android and iOS. Theoretically, it is possible to combine code for website, android and iOS through react native, but it's quite tricky.
+
+tl;dr: use next to create website and backend, react native to create apps for Android and iOS. While doing that, appreciate that you can do all these in one language (well, technically 3) - unlike a few years ago where you needed to know java (/kotlin), SQL, html+css+js, objective C/swift to build a basic web service :)
+
+does that mean I should have 2 repositories, one for my nextjs and one for iOS+android?
+
+I guess - it really does depend on what you're trying to make. But in principal, yes - you will need Nextjs for website and backend, and a react native for Android and iOS.
+
+
+NextJS: Next.js is the react framework for production.
+
+Let's debunk this sentence:
+
+"Framework": It has a lot of built-in features (e.g file-routing which replaces react-router-dom) that help you solve common problems.
+"For React": NextJS just enhances your React apps and adds more features to them.
+"For Production": There are certain problems that you will need to solve for almost all production-ready React apps. NextJS solves those for you.
+Next.js gives you the best developer experience with all the features you need for production: hybrid static & server rendering, TypeScript support, smart bundling, route pre-fetching, and more. No config is needed.
